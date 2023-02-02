@@ -1,0 +1,41 @@
+body{
+    background-color: #78a7dd;
+    font-family: Roboto Mono;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+button{
+    background-color: white;
+    margin-inline: 2%;
+}
+
+.grid{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    height: 500px;
+    width: 500px;
+    margin-top: 2%;
+    background-color: rgb(240, 236, 236);
+    display: grid;
+    
+}
+
+/*Classs for new divs being added*/
+.boxStyle{
+    border: solid rgb(189, 105, 105);
+    background-color: white;
+}
