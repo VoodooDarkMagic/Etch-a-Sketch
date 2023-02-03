@@ -1,6 +1,5 @@
 let gridValue = prompt("Choose a gird Value between 16 and 64");
 const box = document.querySelector(".box");
-//RGB Values for rainbow
 
 
 //function to create a grid
@@ -10,7 +9,7 @@ function createGrid(gridValue){
         const div = document.createElement('div');
         div.classList.add('boxStyle');
         div.addEventListener('mouseover', ()=>{
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = 'black';
         })
         box.appendChild(div);
     }
@@ -44,19 +43,18 @@ black.addEventListener('click', ()=>{
     })
 })
 
-
+//function to random color
 function getRandomColor(){
     const red = Math.floor(Math.random()*255);
     const blue = Math.floor(Math.random()*255);
     const green = Math.floor(Math.random()*255);
 
-    const color = `rgb(${red},${blue},${green})`;
-    return color;
+    return`rgb(${red},${blue},${green})`;
 }
 
 //applies random color
-const rainbow = document.querySelector(".rainbow");
-rainbow.addEventListener('click', () => { 
+const random = document.querySelector(".random");
+random.addEventListener('click', () => { 
     const divs = document.querySelectorAll(".boxStyle");
     divs.forEach((div) => {
         div.addEventListener('mouseover', () => {
