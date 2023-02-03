@@ -15,10 +15,10 @@ h1{
     flex-direction: row;
     justify-content: center;
 }
+
 button{
     background-color: white;
     margin-inline: 2%;
-    /*color: rgb();*/
 }
 
 .grid{
@@ -57,6 +57,7 @@ button{
     height: 30px;
     width: 30px;
 }
+
 a{
     color: black;
     text-decoration: none

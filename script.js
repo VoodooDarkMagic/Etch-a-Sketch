@@ -1,7 +1,6 @@
 let gridValue = prompt("Choose a gird Value between 16 and 64");
 const box = document.querySelector(".box");
 
-
 //function to create a grid
 function createGrid(gridValue){
     box.setAttribute(`style`, `display: grid;grid-template-columns: repeat(${gridValue},1fr); grid-template-rows: repeat(${gridValue}, 1fr);`);
