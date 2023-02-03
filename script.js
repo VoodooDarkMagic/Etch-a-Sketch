@@ -1,4 +1,4 @@
-let gridValue = prompt("Choose a gird Value between 16 and 64");
+let gridValue = prompt("Choose a gird Value");
 const box = document.querySelector(".box");
 
 //function to create a grid
@@ -26,7 +26,7 @@ function deleteGridElements(){
 //Creates a new grid
 const newGrid = document.querySelector(".newGrid");
 newGrid.addEventListener("click", ()=>{
-    gridValue = prompt("Choose a gird Value between 16 and 64");
+    gridValue = prompt("Choose a gird Value");
     deleteGridElements();
     createGrid(gridValue);
 })
