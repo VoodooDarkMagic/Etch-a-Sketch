@@ -1,5 +1,28 @@
-let gridValue = prompt("Choose a gird Value");
+let gridValue = 0;
 const box = document.querySelector(".box");
+
+//creating default 16x16 grid
+defaultGrid =  ()=>{
+    box.setAttribute(`style`, `display: grid; grid-template-columns: repeat(16,1fr); grid-template-rows: repeat(16, 1fr);`);
+    for (let i = 0; i < 256; i++){
+        const div = document.createElement('div');
+        div.classList.add('boxStyle');
+        div.addEventListener('mouseover', ()=>{
+            div.style.backgroundColor = 'black';
+        })
+        box.appendChild(div);
+    }
+};
+defaultGrid();
+
+//changing grid via changing size in input feild.
+const grid = document.getElementById("gridSize");
+grid.addEventListener('change', ()=>{
+    deleteGridElements();
+    gridValue = grid.value;
+    createGrid(gridValue);
+})
+
 
 //function to create a grid
 function createGrid(gridValue){
@@ -13,7 +36,6 @@ function createGrid(gridValue){
         box.appendChild(div);
     }
 }
-createGrid(gridValue);
 
 //functon to delete grids before creating a new one.
 function deleteGridElements(){
@@ -22,14 +44,6 @@ function deleteGridElements(){
         allDiv.remove();
     })
 }
-
-//Creates a new grid
-const newGrid = document.querySelector(".newGrid");
-newGrid.addEventListener("click", ()=>{
-    gridValue = prompt("Choose a gird Value");
-    deleteGridElements();
-    createGrid(gridValue);
-})
 
 //choses black color
 const black = document.querySelector(".black");
