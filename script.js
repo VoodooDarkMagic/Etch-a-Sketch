@@ -26,6 +26,11 @@ grid.addEventListener('change', ()=>{
 
 //function to create a grid
 function createGrid(gridValue){
+    if(gridValue > 64){
+        alert("Grid value should be between 1 and 64")
+        grid.value = 16;
+        return defaultGrid();
+    }
     box.setAttribute(`style`, `display: grid;grid-template-columns: repeat(${gridValue},1fr); grid-template-rows: repeat(${gridValue}, 1fr);`);
     for (let i = 0; i < gridValue*gridValue; i++){
         const div = document.createElement('div');
